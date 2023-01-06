@@ -1,0 +1,167 @@
+{
+  "Main": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "uid"
+      }
+    },
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+        "label": "title"
+      }
+    },
+    "description": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading4",
+        "label": "Description"
+      }
+    },
+    "banner_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {
+          "width": 960,
+          "height": 1080
+        },
+        "thumbnails": [],
+        "label": "Banner Image"
+      }
+    },
+    "body": {
+      "type": "Slices",
+      "fieldset": "Slice zone",
+      "config": {
+        "labels": {
+          "vimeo": [],
+          "quote": [],
+          "banner_with_caption": []
+        },
+        "choices": {
+          "text": {
+            "type": "Slice",
+            "fieldset": "Text",
+            "description": "Rich Text Section",
+            "icon": "text_fields",
+            "non-repeat": {
+              "text": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "label": "text",
+                  "placeholder": "Your content here"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "quote": {
+            "type": "Slice",
+            "fieldset": "Quote",
+            "description": "Pull quote with optional photo",
+            "icon": "add_alert",
+            "non-repeat": {
+              "quote": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "em",
+                  "label": "Quote",
+                  "placeholder": "Your quote"
+                }
+              },
+              "photo": {
+                "type": "Image",
+                "config": {
+                  "constraint": {
+                    "width": 700,
+                    "height": 700
+                  },
+                  "thumbnails": [
+                    {
+                      "name": "mobile",
+                      "width": 350,
+                      "height": 350
+                    }
+                  ],
+                  "label": "Photo"
+                }
+              },
+              "caption": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph",
+                  "label": "Caption"
+                }
+              }
+            },
+            "repeat": {},
+            "display": "list"
+          },
+          "banner_with_caption": {
+            "type": "Slice",
+            "fieldset": "Banner with caption",
+            "description": "Banner with caption",
+            "icon": "chrome_reader_mode",
+            "non-repeat": {
+              "image_banner": {
+                "type": "Image",
+                "config": {
+                  "constraint": {
+                    "width": 1280,
+                    "height": null
+                  },
+                  "thumbnails": [],
+                  "label": "Image Banner"
+                }
+              },
+              "title_of_banner": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "heading2",
+                  "label": "Title Of banner",
+                  "placeholder": "My title of banner"
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph",
+                  "label": "Description",
+                  "placeholder": "My description"
+                }
+              }
+            },
+            "repeat": {},
+            "display": "list"
+          },
+          "vimeo": {
+            "type": "Slice",
+            "fieldset": "Vimeo",
+            "description": "Video Embed",
+            "icon": "ondemand_video",
+            "display": "list",
+            "non-repeat": {
+              "vimeo": {
+                "type": "Embed",
+                "config": {
+                  "label": "Vimeo"
+                }
+              },
+              "caption": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "paragraph, strong, em, hyperlink",
+                  "label": "Caption"
+                }
+              }
+            },
+            "repeat": {}
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "Main": {
+    "background_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Background Image"
+      }
+    },
+    "background_video": {
+      "type": "Link",
+      "config": {
+        "select": "media",
+        "label": "Background Video"
+      }
+    },
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading2",
+        "label": "Title"
+      }
+    },
+    "caption": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading3",
+        "label": "Caption"
+      }
+    },
+    "body": {
+      "type": "Slices",
+      "fieldset": "Slice zone",
+      "config": {
+        "labels": {
+          "featured_content": [],
+          "services_list": [],
+          "portfolio_gallery": []
+        },
+        "choices": {
+          "featured_content": {
+            "type": "Slice",
+            "fieldset": "Featured Content",
+            "description": "Big thumbnails for case studies",
+            "icon": "dashboard",
+            "display": "list",
+            "non-repeat": {
+              "text_box": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "allowTargetBlank": true,
+                  "label": "Text Box"
+                }
+              }
+            },
+            "repeat": {
+              "featured_poster": {
+                "type": "Image",
+                "config": {
+                  "constraint": {
+                    "width": 864,
+                    "height": 1080
+                  },
+                  "thumbnails": [],
+                  "label": "Featured Poster"
+                }
+              },
+              "featured_title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading2",
+                  "label": "Featured Title"
+                }
+              },
+              "featured_subtitle": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading3",
+                  "label": "Featured Subtitle"
+                }
+              },
+              "featured_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Featured Link"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Services": {
+    "body2": {
+      "type": "Slices",
+      "fieldset": "Slice zone",
+      "config": {
+        "labels": {},
+        "choices": {
+          "services_list": {
+            "type": "Slice",
+            "fieldset": "Services List",
+            "description": "List of services we offer",
+            "icon": "dns",
+            "display": "list",
+            "non-repeat": {
+              "services_title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "Services Title"
+                }
+              },
+              "services_description": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "label": "Services Description"
+                }
+              }
+            },
+            "repeat": {
+              "service": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading2",
+                  "label": "Service"
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading4",
+                  "label": "Description"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Portfolio Gallery": {
+    "body1": {
+      "type": "Slices",
+      "fieldset": "Slice zone",
+      "config": {
+        "labels": {},
+        "choices": {
+          "portfolio_gallery": {
+            "type": "Slice",
+            "fieldset": "Portfolio Gallery",
+            "description": "Videos with descriptions",
+            "icon": "video_library",
+            "display": "list",
+            "non-repeat": {},
+            "repeat": {
+              "video_thumbnail": {
+                "type": "Image",
+                "config": {
+                  "constraint": {
+                    "width": 1920,
+                    "height": 1080
+                  },
+                  "thumbnails": [],
+                  "label": "Video Thumbnail"
+                }
+              },
+              "portfolio_video": {
+                "type": "Link",
+                "config": {
+                  "select": "media",
+                  "label": "Internal Video"
+                }
+              },
+              "external_video": {
+                "type": "Link",
+                "config": {
+                  "label": "External Video"
+                }
+              },
+              "video_title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading2",
+                  "label": "Video Title"
+                }
+              },
+              "artist": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading3",
+                  "label": "Artist"
+                }
+              },
+              "client": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading4",
+                  "label": "Client"
+                }
+              },
+              "video_description": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "allowTargetBlank": true,
+                  "label": "Video Description"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
