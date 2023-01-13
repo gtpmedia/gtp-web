@@ -65,6 +65,7 @@ module.exports = {
         schemas: {
           homepage: require("./custom_types/homepage.json"),
           page: require("./custom_types/page.json"),
+          team_member: require("./custom_types/team_member.json"),
         },
       },
     },
