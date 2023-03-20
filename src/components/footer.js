@@ -22,7 +22,7 @@ function Footer(props) {
             <StyledGrid item md={6} sm={12}>
               <StyledContact>202-337-7678</StyledContact>
               <StyledContact>
-                201 12th St., Suite 702
+                201 12th St. South, Suite 702
                 <br />
                 Arlington, VA 22202
               </StyledContact>
